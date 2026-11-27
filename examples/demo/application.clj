@@ -1,4 +1,4 @@
 (ns demo.application)
 
-(defprotocol Application
+(defprotocol IApplication
   (run [app]))

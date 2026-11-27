@@ -2,6 +2,6 @@
   (:require [demo.logger :as logger]))
 
 (defrecord ConsoleLogger []
-  logger/Logger
+  logger/ILogger
   (log! [_ message]
     (println message)))

@@ -10,10 +10,10 @@
 (defn -main [& _]
   (let [registry (di/registry
                   [(di/component {:type ConsoleLogger
-                                  :provides logger/Logger})
+                                  :provides logger/ILogger})
                    (di/component {:type HelloApp
-                                  :provides application/Application
-                                  :inject {:logger logger/Logger}})])
+                                  :provides application/IApplication
+                                  :inject {:logger logger/ILogger}})])
         container (di/create-container registry)
-        app (di/resolve-component container application/Application)]
+        app (di/resolve-component container application/IApplication)]
     (application/run app)))

@@ -1,4 +1,4 @@
 (ns demo.logger)
 
-(defprotocol Logger
+(defprotocol ILogger
   (log! [logger message]))

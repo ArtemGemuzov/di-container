@@ -3,6 +3,6 @@
             [demo.logger :as logger]))
 
 (defrecord HelloApp [logger]
-  application/Application
+  application/IApplication
   (run [_]
     (logger/log! logger "Application started")))
